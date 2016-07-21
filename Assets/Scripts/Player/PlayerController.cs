@@ -38,21 +38,11 @@ public class PlayerController : MonoBehaviour
 
 	private void Move()
 	{
-		currentSpeedVector.x = hAxis;
+		currentSpeedVector.x = hAxis * walkSpeed;
 	}
 
 	//## RUNNING ##//
-	private float runSpeed = 12f, sprintSpeed = 24f;
-
-	//## JUMPING ##//
-	private float jumpSpeed = 50f;
-	private float jumpArc = 40f;
-	private float wallJumpArc = 40f;
-	private float lowJumpArc = 30f;
-	private float jumpSpeedSprint = 60f;
-
-	//## FALLING ##//
-	private float terminalVelocity = -28f, gravityFactor = 170f;
+	private float walkSpeed = 2f;
 
 	private Vector3 CheckNewPosition(Vector3 newPos, Vector3 oldPos)
 	{
