@@ -28,11 +28,17 @@ public class PlayerController : MonoBehaviour
 			hAxis = InputWrapper.GetHorizontalAxis ();
 
 			//3: Handle Regular Movement
+			Move();
 		
 			//4: Apply Movement Vectors to Transform
 
 			transform.position = CheckNewPosition (transform.position + currentSpeedVector * Time.deltaTime, transform.position);
 		}
+	}
+
+	private void Move()
+	{
+		currentSpeedVector.x = hAxis;
 	}
 
 	//## RUNNING ##//
