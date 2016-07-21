@@ -7,9 +7,9 @@ public class PlayerCamera : MonoBehaviour {
 
 	public SpriteRenderer background;
 
-	private bool following = false;
+	private bool following = true;
 	private Vector3 moveVector;
-	private Transform target;
+	public Transform target;
 
 	private float followSpeed = 3f;
 
